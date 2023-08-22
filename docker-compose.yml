@@ -1,0 +1,29 @@
+version: "3.1"
+services:
+  postgres:
+    container_name: restaurant_postgres
+    image: postgres:15-alpine
+    volumes:
+      - ./docker/postgresql/entrypoint.sql:/docker-entrypoint-initdb.d/entrypoint.sql
+      - ./docker/postgresql/data:/var/lib/postgresql/data
+    restart: always
+    environment:
+      POSTGRES_USER: docker
+      POSTGRES_PASSWORD: docker
+    healthcheck:
+      test:
+        [
+          "CMD",
+          "/usr/local/bin/psql",
+          "-U",
+          "docker",
+          "--dbname",
+          "restaurant",
+          "-c",
+          "SELECT 1"
+        ]
+      interval: 5s
+      timeout: 1s
+      retries: 10
+    ports:
+      - 5432:5432

@@ -1,0 +1,4 @@
+CREATE DATABASE restaurant;
+CREATE DATABASE restaurant_test;
+GRANT ALL PRIVILEGES ON DATABASE restaurant TO docker;
+GRANT ALL PRIVILEGES ON DATABASE restaurant_test TO docker;
