@@ -59,10 +59,11 @@ Rust and Cargo must be installed on the system
 Docker
 
 To build and run this application, apply theses commands in the project folder:
-
+```
 cargo build --release
 docker-compose up -d
 cargo run --bin server
+```
 
 ## Exploration
 To explore the API, you can use following commands:
