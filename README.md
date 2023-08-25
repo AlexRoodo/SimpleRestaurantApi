@@ -2,7 +2,7 @@
 
 ## Introduction
 The project is developed for the [interview problem](https://github.com/paidy/interview/blob/master/SimpleRestaurantApi.md) of [Paidy Inc.](https://paidy.com/), in order to realize a simple food ordering system in a restaurant.
-This is the client application for the project.
+This is the server application for the project.
 
 ## Requirements for server
 "Please try to spend around 4-6 hours on this test. The focus will be on data structure choice, API design and implementation, internal implementation"
